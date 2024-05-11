@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+ul,
+ol,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+:root {
+    --Montserrat: "Montserrat", sans-serif;
+}
+
+
+/* common css end */
+
+
+/* content css start */
+
+#numberCounter {
+    background: url(../images/bg.jpg);
+    background-position: center;
+    padding: 300px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.numberCounterContentTop__header {
+    font-family: var(--Montserrat);
+    font-size: 38px;
+    color: #f4f5f6;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.numberCounterContentTop__para {
+    font-family: var(--Montserrat);
+    font-size: 18px;
+    line-height: 26px;
+    color: #f4f5f6;
+    text-align: center;
+    padding: 0 300px;
+}
+
+.numberCounterContentBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+    margin-top: 80px;
+}
+
+.count__header {
+    color: #fbf9fc;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: var(--Montserrat);
+    margin-bottom: 15px;
+    transition: ease-in-out .3s;
+    -webkit-transition: ease-in-out .3s;
+    -moz-transition: ease-in-out .3s;
+    -ms-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
+}
+
+.count__discription {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fbf9fc;
+    font-family: var(--Montserrat);
+    text-align: center;
+}
+
+.count__header--mod {
+    color: #7bf4e0;
+}
+
+
+/* content css end */
