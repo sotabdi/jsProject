@@ -40,17 +40,18 @@ function subInputCheak() {
 
 function guessInputCheak() {
     let guessval = guessInpt.value;
-    if (isNaN(guessInpt.value)) {
+    if (isNaN(guessval)) {
         guessattepMsg.innerText = 'Please enter a valid number';
-        guessInpt.value = '';
-    } else if (guessInpt.value < 1) {
+        guessval = '';
+    } else if (guessval < 1) {
+        console.log(guessval);
         guessattepMsg.innerText = 'Please enter a number greater than 1!';
-        guessInpt.value = '';
-    } else if (guessInpt.value > 10) {
+        guessval = '';
+    } else if (guessval > 10) {
         guessattepMsg.innerText = 'Please enter a number less than 10!';
-        guessInpt.value = '';
+        guessval = '';
     } else {
-        prevGuess.push(guessInpt.value);
+        prevGuess.push(guessval);
         if (attempt === 11) {
             displayGuess();
             guessattepMsg.innerText = 'Game Over';

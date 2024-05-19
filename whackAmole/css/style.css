@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+ul,
+ol,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+:root {
+    --Amatic: "Amatic SC", sans-serif;
+}
+
+
+/* common css end */
+
+
+/* content css start */
+
+body {
+    background: #ffc600;
+}
+
+.whackHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whackHead__header {
+    font-family: var(--Amatic);
+    font-size: 8rem;
+}
+
+.whackHead__Count {
+    font-family: var(--Amatic);
+    font-size: 8rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
+}
+
+.whackInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.whackBody {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    position: relative;
+}
+
+.hole:after {
+    display: block;
+    background: url("../images/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url("../images/mole.svg") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+.startBtn {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: var(--Amatic);
+    margin-top: 80px;
+}
+
+
+/* content css end */
