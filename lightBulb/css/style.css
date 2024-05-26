@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+ul,
+ol,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+:root {
+    --Montserrat: "Montserrat", sans-serif;
+}
+
+
+/* common css end */
+
+
+/* content css start */
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    font-family: var(--Montserrat);
+    font-size: 40px;
+    padding-bottom: 30px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.bulboff {
+    background: url(../images/lightoff.png);
+    background-repeat: no-repeat;
+    width: 265px;
+    height: 400px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.bulbon {
+    background: url(../images/lighton.png);
+    background-repeat: no-repeat;
+    width: 265px;
+    height: 400px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+
+/* content css end */
