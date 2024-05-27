@@ -8,9 +8,9 @@ let imagesURL = ['images/category-5%201.png', 'images/category-2%201.png', 'imag
 
 images.forEach((elm) => {
     elm.addEventListener('click', (eventElm) => {
-        releventImg(eventElm.target.src)
+        let url = eventElm.target.src.split("/").splice('7').join('/')
+        releventImg(url)
         popup.classList.add('active');
-        nextBtn.style.display = 'block';
     })
 
 })
@@ -23,33 +23,46 @@ nextBtn.addEventListener('click', (e) => {
     nexT(e);
 })
 
+prevBtn.addEventListener('click', (e) => {
+    preV(e)
+})
+
 function nexT(e) {
     prevBtn.style.display = 'block';
     let respondImg = e.target.parentElement.parentElement.children[0].children[0].src.split('/').splice(7).join('/');
     let lenth = imagesURL.length;
-    if (respondImg === imagesURL[lenth - 1]) {
+    if (respondImg === imagesURL[lenth - 2]) {
         nextBtn.style.display = 'none';
     }
     for (let i = 0; i < lenth - 1; i++) {
         if (imagesURL[i] === respondImg) {
-            popupImg.src = imagesURL[++i]
+            popupImg.src = imagesURL[++i];
         }
     }
 }
-prevBtn.addEventListener('click', (e) => {
+
+function preV(e) {
     nextBtn.style.display = 'block';
     let respondImg = e.target.parentElement.parentElement.children[0].children[0].src.split('/').splice(7).join('/');
     let lenth = imagesURL.length;
-    for (let i = 0; i < lenth; i++) {
+    if (respondImg === imagesURL[1]) {
+        prevBtn.style.display = 'none';
+    }
+    for (let i = lenth - 1; i > 0; i--) {
         if (imagesURL[i] === respondImg) {
-            if (i > 0) {
-                popupImg.src = imagesURL[i - 1]
-            }
+            popupImg.src = imagesURL[i - 1];
         }
     }
-})
+}
 
-function releventImg(eventElem) {
-    let imgURL = eventElem.split("/").splice('7').join('/');
-    popupImg.src = imgURL;
+function releventImg(url) {
+    popupImg.src = url;
+    if (url === imagesURL[imagesURL.length - 1]) {
+        nextBtn.style.display = 'none';
+    } else if (url === imagesURL[0]) {
+        prevBtn.style.display = 'none';
+    } else {
+        nextBtn.style.display = 'block';
+        prevBtn.style.display = 'block';
+    }
 }
