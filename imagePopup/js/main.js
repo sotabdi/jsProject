@@ -10,6 +10,7 @@ images.forEach((elm) => {
     elm.addEventListener('click', (eventElm) => {
         releventImg(eventElm.target.src)
         popup.classList.add('active');
+        nextBtn.style.display = 'block';
     })
 
 })
@@ -19,18 +20,24 @@ closebtn.addEventListener('click', () => {
 })
 
 nextBtn.addEventListener('click', (e) => {
+    nexT(e);
+})
+
+function nexT(e) {
+    prevBtn.style.display = 'block';
     let respondImg = e.target.parentElement.parentElement.children[0].children[0].src.split('/').splice(7).join('/');
     let lenth = imagesURL.length;
-    for (let i = 0; i < lenth; i++) {
+    if (respondImg === imagesURL[lenth - 1]) {
+        nextBtn.style.display = 'none';
+    }
+    for (let i = 0; i < lenth - 1; i++) {
         if (imagesURL[i] === respondImg) {
-            if (i < lenth - 1) {
-                popupImg.src = imagesURL[i + 1]
-            }
-
+            popupImg.src = imagesURL[++i]
         }
     }
-})
+}
 prevBtn.addEventListener('click', (e) => {
+    nextBtn.style.display = 'block';
     let respondImg = e.target.parentElement.parentElement.children[0].children[0].src.split('/').splice(7).join('/');
     let lenth = imagesURL.length;
     for (let i = 0; i < lenth; i++) {
@@ -38,7 +45,6 @@ prevBtn.addEventListener('click', (e) => {
             if (i > 0) {
                 popupImg.src = imagesURL[i - 1]
             }
-
         }
     }
 })
