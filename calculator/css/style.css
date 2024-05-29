@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+ul,
+ol,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+:root {
+    --Montserrat: "Montserrat", sans-serif;
+}
+
+
+/* common css end */
+
+
+/* content css start */
+
+#calculatorFull {
+    background: #313131;
+}
+
+.calculator {
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    box-sizing: border-box;
+}
+
+.display {
+    width: 285px;
+    color: #fff;
+    font-size: 50px;
+    font-family: var(--Montserrat);
+    padding-top: 110px;
+    text-align: right;
+    border: none;
+    background: none;
+}
+
+.calKeyR1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.toprow .keys {
+    width: 60px;
+    height: 60px;
+    background: #9F9F9F;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.keys {
+    width: 60px;
+    height: 60px;
+    background: #313131;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.bottomRow .keys:nth-child(1) {
+    width: 135px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.keys:nth-last-child(1) {
+    background: #F49B04;
+    color: #fff;
+}
+
+
+/* content css end */
